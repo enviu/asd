@@ -39,7 +39,7 @@
                         key-positions = <6 7>;
                         bindings = <&kp BSPC>;
                 };
-                combo_bscp {
+                combo_del {
                         timeout-ms = <50>;
                         key-positions = <7 8>;
                         bindings = <&kp DEL>;
