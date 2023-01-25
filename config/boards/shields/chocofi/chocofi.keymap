@@ -36,7 +36,6 @@
                         label = "PROG_CAPS";
                         #binding-cells = <0>;
                         mods = <(MOD_LSFT | MOD_LCTRL)>;
-                        continue-list = <UNDERSCORE>;
                 };
         };
               
