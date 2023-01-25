@@ -20,7 +20,15 @@
 #define ADJ 6
 
 / {
-
+        macros {
+                bkt_open_close: bkt_open_close {
+                        label = "BKT_OPEN_CLOSE";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp LBKT &kp RBKT>;
+                 };
+        };
+        
         behaviors {
                 hm: homerow_mods {
                         compatible = "zmk,behavior-hold-tap";
@@ -100,7 +108,7 @@
                         bindings = <
    &kp Q       &kp W       &kp E          &kp R          &kp T             &kp Y        &kp U         &kp I            &kp O          &kp P
    &hm LALT A  &hm LGUI S  &hm LCTRL D    &hm LSHFT F    &kp G             &kp H        &hm RSHFT J   &hm LCTRL K      &hm LGUI L     &hm LALT SEMI
-   &kp Z       &kp X       &kp  C         &kp V          &kp B             &kp N        &kp M         &kp COMMA        &kp DOT        &kp FSLH
+   &kp Z       &kp X       &kp  C         &kp V          &kp B             &kp N        &kp M         &kp COMMA        &kp DOT        &bkt_open_close
                            &mt RCTL ESC   &lt NAV TAB    &lt MOUSE SPACE   &kp RET      &lt NUM BSPC  &lt FUN DEL
                         >;
                 };
