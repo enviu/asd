@@ -30,13 +30,6 @@
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
-                
-                prog_caps: behavior_prog_caps_word {
-                        compatible = "zmk,behavior-caps-word";
-                        label = "PROG_CAPS";
-                        #binding-cells = <0>;
-                        mods = <(MOD_LSFT | MOD_LCTRL)>;
-                };
         };
               
         combos {
@@ -97,7 +90,7 @@
                         bindings = <&kp RBKT>;
                 };
         };
-
+          
         keymap {
                 compatible = "zmk,keymap";
 
