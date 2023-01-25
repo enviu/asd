@@ -30,6 +30,23 @@
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
+                
+                td_brc: tap_dance_brc {
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "TAP_DANCE_BRC";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&kp RBRC>, <&brc_open_close>;
+                };
+        };
+        
+        macros {
+                brc_open_close: brc_open_close {
+                        label = "BRC_OPEN_CLOSE";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp LBRC &kp RBRC>;
+                };
         };
         
         combos {
@@ -72,7 +89,7 @@
                 combo_lbrc {
                         timeout-ms = <50>;
                         key-positions = <2 12>;
-                        bindings = <&kp LBRC>;
+                        bindings = <&td_brc>;
                 };
                 combo_rbrc {
                         timeout-ms = <50>;
