@@ -20,6 +20,16 @@
 #define ADJ 6
 
 / {
+
+        macros {
+                brc_open_close: brc_open_close {
+                        label = "BRC_OPEN_CLOSE";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp LBRC &kp RBRC>;
+                };
+        };
+        
         behaviors {
                 hm: homerow_mods {
                         compatible = "zmk,behavior-hold-tap";
@@ -39,16 +49,7 @@
                         bindings = <&kp RBRC>, <&brc_open_close>;
                 };
         };
-        
-        macros {
-                brc_open_close: brc_open_close {
-                        label = "BRC_OPEN_CLOSE";
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings = <&kp LBRC &kp RBRC>;
-                };
-        };
-        
+              
         combos {
                 compatible = "zmk,combos";
                 combo_bscp {
