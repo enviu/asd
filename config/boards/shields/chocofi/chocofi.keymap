@@ -19,11 +19,11 @@
 #define FUN 5
 #define ADJ 6
 
-/ {        
+&caps_word {
+        continue-list = <UNDERSCORE MINUS BACKSPACE>;
+};
 
-        &caps_word {
-                continue-list = <UNDERSCORE MINUS BACKSPACE>;
-        };
+/ {        
 
         behaviors {
                 hm: homerow_mods {
