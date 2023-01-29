@@ -30,8 +30,6 @@
                         compatible = "zmk,behavior-macro";
                         label = "ZM_my_macro";
                         #binding-cells = <0>;
-                        wait-ms = <30>;
-                        tap-ms = <40>;
                         bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
                 };
         };
@@ -145,7 +143,7 @@
                         bindings = <
    &kp Q       &kp W       &kp E          &kp R          &kp T             &kp Y        &kp U         &kp I            &kp O          &kp P
    &hm LALT A  &hm LGUI S  &hm LCTRL D    &hm LSHFT F    &kp G             &kp H        &hm RSHFT J   &hm LCTRL K      &hm LGUI L     &hm LALT SEMI
-   &kp Z       &kp X       &kp  C         &kp V          &kp B             &kp N        &kp M         &kp COMMA        &kp DOT        &kp FSLH
+   &kp Z       &kp X       &kp  C         &kp V          &kp B             &kp N        &kp M         &kp COMMA        &kp DOT        &kmy_macro
                            &mt RCTL ESC   &lt NAV TAB    &lt MOUSE SPACE   &kp RET      &lt NUM BSPC  &lt FUN DEL
                         >;
                 };
