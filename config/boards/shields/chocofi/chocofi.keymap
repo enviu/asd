@@ -25,7 +25,7 @@
 
 / {        
 
-          macros {
+        macros {
                 my_macro: my_macro {
                         compatible = "zmk,behavior-macro";
                         label = "ZM_my_macro";
@@ -50,12 +50,6 @@
               
         combos {
                 compatible = "zmk,combos";
-
-                combo_mymacro {
-                        timeout-ms = <50>;
-                        key-positions = <1 2 3> ;
-                        bindings = <&my_macro>;
-                };
                 combo_capsword {
                         timeout-ms = <50>;
                         key-positions = <32 33> ;
