@@ -23,6 +23,10 @@
         continue-list = <UNDERSCORE MINUS BACKSPACE>;
 };
 
+&mmv {
+    time-to-max-speed-ms = <300>;
+};
+
 / {        
 
         macros {
